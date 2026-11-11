@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Estatísticas</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    padding:20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+h1{
+    color:#0d6efd;
+}
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.info{
+    flex:1;
+    min-width:200px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.info h2{
+    color:#0d6efd;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:10px;
+}
+
+th{
+    background:#0d6efd;
+    color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Estatísticas do Projeto</h1>
+
+<div class="cards">
+
+<div class="info">
+<h2 id="totalFeedbacks">0</h2>
+<p>Total de Feedbacks</p>
+</div>
+
+<div class="info">
+<h2 id="mediaNotas">0</h2>
+<p>Média das Notas</p>
+</div>
+
+<div class="info">
+<h2 id="totalSim">0</h2>
+<p>Consideraram Útil</p>
+</div>
+
+</div>
+
+<br>
+
+<div class="card">
+
+<h2>Distribuição das Notas</h2>
+
+<canvas id="grafico"></canvas>
+
+</div>
+
+<br>
+
+<div class="card">
+
+<h2>Comentários Recebidos</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Nome</th>
+<th>Comentário</th>
+</tr>
+</thead>
+
+<tbody id="tabelaComentarios">
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script type="module" src="js/estatisticas.js"></script>
+
+</body>
+</html>
